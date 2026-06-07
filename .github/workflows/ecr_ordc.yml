@@ -10,10 +10,10 @@ permissions:
   contents: read
 
 env:
-  AWS_REGION: ap-southeast-1
+  AWS_REGION: us-east-1
   ECR_REPOSITORY: learndevopsnow
-  AWS_ACCOUNT_ID: 265xxxxxxxxxxxx # Replace Your ASW ACCOUNT ID
-  IMAGE_TAG: ${{ github.sha }}
+  AWS_ACCOUNT_ID: 437371137769 # Replace Your ASW ACCOUNT ID
+  IMAGE_TAG: latest
 
 jobs:
   build-and-push:
@@ -26,8 +26,8 @@ jobs:
       - name: Configure AWS Credentials Using OIDC
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::265xxxxxx:role/github-actions-ecr-role # Replace Your ASW ACCOUNT ID
-          aws-region: ap-southeast-1
+          role-to-assume: arn:aws:iam::437371137769:role/github-actions-ecr-role # Replace Your ASW ACCOUNT ID
+          aws-region: us-east-1
 
       - name: Login To Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
