@@ -9,7 +9,7 @@ env:
   AWS_REGION: ap-southeast-1
   ECR_REPOSITORY: devopstest2026
   AWS_ACCOUNT_ID: 437371137769 # Replace Your ASW ACCOUNT ID
-  IMAGE_TAG: ${{ github.sha }}
+  IMAGE_TAG: latest
 
 jobs:
   build-and-push:
