@@ -1,4 +1,4 @@
-name: Push Docker Image To AWS ECR
+name: Push Docker Image To AWS ECR 1
 
 on:
   push:
